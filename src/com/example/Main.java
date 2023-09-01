@@ -1,19 +1,31 @@
 package com.example;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int number1 = input.nextInt();
-        int number2 = input.nextInt();
-        int number3 = input.nextInt();
+
+//        int[][] numbers = new int[2][3];
+        // {{1, 2, 3},
+        // {4, 5, 6}}
+
+        int[][] numbers = {{1, 2, 3},
+                            {4, 5, 6},
+                            {7, 8, 9}};
 
 
-        int sum = number1+number2+number3;
-        System.out.println(sum);
-        System.out.println(number1*number2*number3);
-        System.out.println((double) sum/3);
+        //System.out.println(numbers[1][0]);  // [индекс столбца][индекс элемента]
+
+
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = 0; j < numbers[i].length; j++) {
+                System.out.printf("%d ", numbers[i][j]);
+            }
+            System.out.println();
+        }
+
     }
 }
 
